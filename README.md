@@ -24,8 +24,8 @@ Pequeno projeto para fixar meus estudos e voltar a praticar front-end.
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/gilgulart/projeto-utilidades.git
 
 Abra o arquivo index.html no navegador.
 
-Feito por Gilberto Gulart 🚀3
+Feito por Gilberto Gulart 🚀
