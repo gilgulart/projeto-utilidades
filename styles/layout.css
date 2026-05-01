@@ -87,3 +87,8 @@ p, li {
 small { 
     font: var(--small);
 }
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
