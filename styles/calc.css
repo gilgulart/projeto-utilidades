@@ -1,0 +1,79 @@
+.calculator {
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 0.375rem;
+  width: 190px;
+  height: 254px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: var(--surface-hover);
+}
+
+.output {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  height: 48px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  background-color: var(--surface);
+}
+
+.result {
+  font-size: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  border: none;
+  border-radius: 0.375rem;
+  padding: 10px;
+  background-color: var(--white);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--white-hover);
+}
+
+button:active {
+  background-color: var(--white-active);
+}
+
+.bg-green {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.bg-green:hover {
+  background-color: var(--secondary-hover);
+  color: var(--text);
+}
+
+.bg-green:active { 
+  background-color: var(--secondary-active);
+  color: var(--text);
+}
+
+.bg-red {
+  background-color:var(--red);
+  color: var(--text);
+}
+
+.bg-red:hover {
+  background-color: var(--red-hover);
+  color: var(--text);
+}
+
+.bg-red:active{
+  background-color: var(--red-active);
+}

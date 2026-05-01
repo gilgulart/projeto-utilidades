@@ -1,0 +1,37 @@
+header {
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+.navbar {
+    grid-template-areas: "links";
+    background-color: var(--bg-color);
+    color: var(--text);
+    backdrop-filter: blur(12px);
+    padding: 0 5%;
+    height: 60px;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar ul{ 
+    grid-area: links;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+}
+
+.navbar ul li {height: 100%; display: flex; align-items: center;}
+
+.navbar ul li  a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.navbar ul li  a:hover{
+    color: var(--primary);
+}
+.navbar ul li  a:active{
+    color: var(--primary-hover);
+}

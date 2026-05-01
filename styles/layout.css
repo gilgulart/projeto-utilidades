@@ -1,0 +1,89 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--bg-secondary: #0F172A;
+--bg-color: #020617;
+
+--surface: #1E293B;
+--surface-hover: #273449;
+
+--border:#334155;
+--border-soft:#1E293B;
+--border-focus:#3B82F6;
+
+
+--primary: #3B82F6;
+--primary-hover: #2563EB;
+
+--secondary: #22C55E;
+--secondary-hover: #16A34A;
+--secondary-active: #15803D;
+
+--red: #EF4444;
+--red-hover: #DC2626;
+--red-active: #B91C1C;
+
+--accent: #8B5CF6;
+--accent-hover: #7C3AED;
+
+--white: #F8FAFC;
+--white-hover: #E2E8F0;
+--white-active: #CBD5F5;
+
+--text: #E2E8F0;
+--text-secondary: #94A3B8;
+
+--font-family: "Poppins", sans-serif;
+--title: 600 2rem var(--font-family);
+--paragraph: 400 1rem var(--font-family);   
+--small: 400 .75rem var(--font-family);
+--btn-text: 500 1rem var(--font-family)
+
+}
+
+html {scroll-behavior: smooth;}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* Add your background pattern here */
+  background-color: var(--bg-color);
+  background-image: radial-gradient(var(--bg-secondary) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+}
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+h1 {
+    text-transform: uppercase;
+    font: var(--title)
+}
+
+p, li {
+    font: var(--paragraph);
+}
+
+small { 
+    font: var(--small);
+}
