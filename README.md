@@ -17,8 +17,8 @@ Pequeno projeto para fixar meus estudos e voltar a praticar front-end.
 ### 🚧 Em desenvolvimento: estilo CSS
 
 ### 💡 Próximas melhorias
--Responsividade
--Funcionalidades
+- Responsividade
+- Funcionalidades
 
 ## 📂 Como usar
 
