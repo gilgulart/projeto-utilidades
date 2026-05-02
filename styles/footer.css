@@ -3,8 +3,8 @@
     grid-template-areas: "slogan     signature" ;
     border-top: 1px solid var(--border) ;
     background-color: var(--bg-color);
-    color: var(--text);
     padding: 1rem ;
+    color: var(--text);
 }
 
 .footer a {
@@ -12,10 +12,11 @@
     color: var(--text);
     margin: 0 0.5rem;
     transition: 0.2s;
+    color: var(--primary);
 }
 
 .footer a:hover{
-    color: var(--primary);
+    color: var(--text);
 }
 
 .signature { 
