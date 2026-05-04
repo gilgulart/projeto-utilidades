@@ -1,25 +1,25 @@
 .calculator {
-  border: 1px solid rgb(179, 179, 179);
+  border: 1px solid var(--border);
   border-radius: 0.375rem;
-  width: 190px;
-  height: 254px;
+  width: 380px;
+  height: 500px;
   font-family: Arial, sans-serif;
   margin: 0 auto;
-  padding: 10px;
-  background-color: var(--surface-hover);
+  padding: 20px;
+  background-color: var(--primary);
 }
 
 .output {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 0.375rem;
-  height: 48px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  height: 96px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 10px;
-  background-color: var(--surface);
+  padding-right: 20px;
+  background-color: var(--surface-hover);
 }
 
 .result {
@@ -29,7 +29,7 @@
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 
 button {
@@ -49,31 +49,31 @@ button:active {
   background-color: var(--white-active);
 }
 
-.bg-green {
+.btn-equal {
   background-color: var(--secondary);
   color: var(--text);
 }
 
-.bg-green:hover {
+.btn-equal:hover {
   background-color: var(--secondary-hover);
   color: var(--text);
 }
 
-.bg-green:active { 
+.btn-equal:active { 
   background-color: var(--secondary-active);
   color: var(--text);
 }
 
-.bg-red {
+.btn-clear {
   background-color:var(--red);
   color: var(--text);
 }
 
-.bg-red:hover {
+.btn-clear:hover {
   background-color: var(--red-hover);
   color: var(--text);
 }
 
-.bg-red:active{
+.btn-clear:active{
   background-color: var(--red-active);
 }
