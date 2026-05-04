@@ -23,7 +23,8 @@
 }
 
 .result {
-  font-size: 20px;
+  font: var(--title);
+  color: var(--text);
 }
 
 .buttons {
