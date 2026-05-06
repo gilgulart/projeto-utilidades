@@ -1,43 +1,45 @@
-let currentValue = 0;
-let beforeValue = null;
-let operator = null;
-let waitingSec = false;
+const state = {
 
+    currentValue: 0,
+    beforeValue: null,
+    operator: null,
+    waitingSec: false
+}
+    
 const display = document.querySelector(".result");
 
-function output(n) {
-    display.innerText = n;
+function output(a) {
+    display.innerText = a;
+
 }
 
 
 function clickNumber(num) {
-    if (waitingSec){
-        currentValue = num;
-        waitingSec = false;
-        console.log("valor atual " + currentValue);
+    if (state.waitingSec){
+        state.currentValue = num;
+        state.waitingSec = false;
         
     } else {
-        currentValue = currentValue === 0
+        state.currentValue = state.currentValue === 0
         ? num
-        : currentValue + num;
-        console.log("valor atual " + currentValue)
+        : state.currentValue + num;
     }
-
-    return currentValue
 }
 
 function clickOperator(op) {
-    beforeValue = currentValue;
-    operator = op; 
-    waitingSec = true;
-    
-    return operator;
+    state.beforeValue = state.currentValue;
+    state.operator = op; 
+    state.waitingSec = true;
+
 }
 
-
 function displayClear() {
-    currentValue = "";
-    display.innerText = currentValue;
+    state.currentValue = 0;
+    state.beforeValue = null;
+    state.operator = null;
+    state.waitingSec = false;
+
+    display.innerText = state.currentValue;
 
 }
 
@@ -46,20 +48,23 @@ const buttons = document.querySelector(".buttons")
 buttons.addEventListener('click', (e) =>{
     const clicked = e.target;
     if (clicked.classList.contains("btn-number")) {
-        clickNumber(clicked.innerText);
-        output(currentValue);
+        state.currentValue = clickNumber(clicked.innerText);
+        console.log(state);
+    
+        
+        
+        output(state.currentValue);
         // console.log("número: " + clicked.innerText);
         
     }
     if (clicked.classList.contains("operator")) {
         operator = clicked.innerText;
         clickOperator(operator)
-        // console.log("operador" + operator);
+        console.log("operador " + operator);
     }
 
     if (clicked.classList.contains("btn-clear")) {
         displayClear();
-        // console.log("limpo " + currentValue);
         
     }
 
@@ -69,3 +74,9 @@ buttons.addEventListener('click', (e) =>{
     }
 
 })
+
+
+function calculate(a, b) {
+    
+    
+}
