@@ -28,8 +28,4 @@ git clone https://github.com/gilgulart/projeto-utilidades.git
 
 Abra o arquivo index.html no navegador.
 
-<<<<<<< HEAD
 Feito por Gilberto Gulart 🚀
-=======
-Feito por Gilberto Gulart 🚀
->>>>>>> 7fa01f3 (style: estilos do footer)
