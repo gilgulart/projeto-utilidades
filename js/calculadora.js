@@ -19,6 +19,12 @@ function clickNumber(num) {
     state.currentValue =
       state.currentValue === 0 ? num : state.currentValue + num;
   }
+  console.log(
+    "valor anterior " +
+      state.beforeValue +
+      " valor atual " +
+      state.currentValue,
+  );
 
   output(state.currentValue);
 }
@@ -35,17 +41,27 @@ function calculate(a, b, operator) {
   a = parseFloat(a);
   b = parseFloat(b);
 
-  if (operator == "+") return a + b;
-  if (operator == "-") return a - b;
-  if (operator == "*") return a * b;
-  if (operator == "/") return b !== 0 ? a / b : "Erro";
+  if (operator == "+") {
+    console.log(`${a} ${operator} ${b} `);
+    return a + b;
+  }
+  if (operator == "-") {
+    console.log(`${a} ${operator} ${b} `);
+    return a - b;
+  }
+
+  if (operator == "*") {
+    console.log(`${a} ${operator} ${b} `);
+    return a * b;
+  }
+  if (operator == "/") {
+    console.log(`${a} ${operator} ${b} `);
+    return b !== 0 ? a / b : "Erro";
+  }
 }
 
 function displayClear() {
   state.currentValue = 0;
-  state.beforeValue = null;
-  state.operator = null;
-  state.waitingSec = false;
 
   display.innerText = state.currentValue;
 }
@@ -90,7 +106,7 @@ document.addEventListener("keydown", (e) => {
     output(state.operator);
   }
 
-  if (key === "=" || key === "Enter") {
+  if ((key === "=") | (key === "Enter")) {
     const result = calculate(
       state.beforeValue,
       state.currentValue,
@@ -102,6 +118,7 @@ document.addEventListener("keydown", (e) => {
 
   if (key === "Escape" || key === "Delete") {
     displayClear();
+
   }
 
   if (key === "Backspace") {
